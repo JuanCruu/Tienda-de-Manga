@@ -5,5 +5,6 @@
     genero:String[],
     precio:number,
     paginas:String[],
-    comprado:boolean
+    comprado:boolean,
+    oferta:boolean
 }
