@@ -1,32 +1,27 @@
 
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-link active" href="#">New <span class="sr-only">(current)</span></a>
-      <a class="nav-link" href="#">Manga</a>
-      <a class="nav-link" href="#">Comic</a>
-      <a class="nav-link" href="#">Libro</a>
+      <a class="nav-link" href="#">genero</a>
+      <a class="nav-link" href="#">about</a>
+      <a class="nav-link" href="#">biblioteca</a>
     </div>
   </div>
 </nav>
 <!-- *///////////////////////////////////////////////////////////////////////////////////////* -->
 <div class="album py-5 bg-light">
-  <div class="container">
-    <div class="row">
-      <div class="col-8">
+  <div >
 
-        <app-lista-mangas>
+      <div class="row">
+        <div class="col-10">
+          <app-lista-mangas></app-lista-mangas>
+        </div>
 
-        </app-lista-mangas>
-
+        <div class="col-2">
+          <app-carrito-compras></app-carrito-compras>
+        </div>
       </div>
-      <div class="col-2">
-
-        <app-carrito-compras></app-carrito-compras>
-
-      </div>
-    </div>
   </div>
 </div>
 
