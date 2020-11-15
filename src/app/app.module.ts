@@ -7,6 +7,7 @@ import { ListaMangasComponent } from './lista-mangas/lista-mangas.component';
 import { CarritoComprasComponent } from './carrito-compras/carrito-compras.component';
 import { TiendaAboutComponent } from './tienda-about/tienda-about.component';
 import { TiendaMangasComponent } from './tienda-mangas/tienda-mangas.component';
+import { BotoneraCompraComponent } from './botonera-compra/botonera-compra.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TiendaMangasComponent } from './tienda-mangas/tienda-mangas.component';
     ListaMangasComponent,
     CarritoComprasComponent,
     TiendaAboutComponent,
-    TiendaMangasComponent
+    TiendaMangasComponent,
+    BotoneraCompraComponent
   ],
   imports: [
     BrowserModule,

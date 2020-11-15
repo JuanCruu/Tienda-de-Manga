@@ -128,7 +128,5 @@ export class ListaMangasComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  comprar(manga:Manga):void{
-    manga.comprado=true
-  }
+  
 }
