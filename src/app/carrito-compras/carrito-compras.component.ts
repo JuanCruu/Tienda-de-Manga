@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, observable } from 'rxjs';
+import { Manga } from '../lista-mangas/Manga';
 import { MangaCartService } from '../manga-cart.service';
 
 @Component({
@@ -8,8 +10,20 @@ import { MangaCartService } from '../manga-cart.service';
 })
 export class CarritoComprasComponent implements OnInit {
 
-  constructor(private cart:MangaCartService) { }
+  carritoManga$:Observable<Manga[]>;
 
+  constructor(private cart:MangaCartService) { 
+    
+    this.carritoManga$=cart.carritoManga.asObservable();
+
+  }
+ 
+  quitar(manga:Manga){
+    this.cart.quitar(manga)
+  }
+  comprarTodo(){
+    this.cart.comprarTodo()
+  }
   ngOnInit(): void {
   }
  

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ComponentFixtureAutoDetect } from '@angular/core/testing';
-import { from } from 'rxjs';
+
+import { from, Observable } from 'rxjs';
+import { MangaCartService } from '../manga-cart.service';
 import { Manga } from './Manga';
 
 @Component({
@@ -9,6 +11,19 @@ import { Manga } from './Manga';
   styleUrls: ['./lista-mangas.component.scss']
 })
 export class ListaMangasComponent implements OnInit {
+
+  
+  mangasComprados$:Observable<Manga[]>;
+
+  constructor(private manga:MangaCartService) { 
+   
+    this.mangasComprados$=manga.MangaComprados.asObservable();
+    
+  }
+
+  seComprodesdeCarrito(manga:Manga){
+
+  }
 
   mangas:Manga[]=[
   {
@@ -28,7 +43,7 @@ export class ListaMangasComponent implements OnInit {
     genero:[" ","Ciencia ficcion","recuerdos de la vida"],
     precio:170.55,
     paginas:["https://otakuteca.com/images/books/cover/5df9321aaa2e4.jpg","pagina 2"],
-    comprado:true,
+    comprado:false,
     oferta:false,
   },
   {
@@ -124,8 +139,7 @@ export class ListaMangasComponent implements OnInit {
   }
 
 ]
-  constructor() { }
-
+ 
   ngOnInit(): void {
   }
   

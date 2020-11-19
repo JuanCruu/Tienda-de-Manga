@@ -1,12 +1,13 @@
 <div class="d-flex justify-content-between align-items-center" >
     <div class="btn-group">
-      <button type="button" class="btn btn-sm btn-outline-secondary"(click)="comprar(comprado)">Comprar</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary"(click)="comprar(comprado,manga)">Comprar</button>
       <button type="button" class="btn btn-sm btn-outline-secondary"(click)="addToCart(manga)">add to Cart</button>
     </div>
    <!--  no uso imputs porque en la logica de negocio de mi pagina, no tiene sentido tener stock para un 'comic' digital.
     pero por tal de tener un componente mas A.T.O.M.I.C.O existe el componente botonera que se encarga de todo lo referido a la compra y el carrito
 
-    PD: el primer button refiere al video 6 donde los componentes se comunican a travez del @input y @Output pasando solo un boolean
+    PD: el primer button refiere al video 6 donde los componentes se comunican a travez del @input y @Output pasando solo un boolean,decidi pasarle tambien el 
+    objeto manga ya que decidi tener in arreglo de mangas comprados, pero decidi dejer el boolean para dar a entender que se
     
     el segundo button  utilza un servicio.pero necesitaba llegarle el objeto Manga al componente por lo que la forma de proceder del primer boton
     esta de gusto ya que el componente tiene todos los atributos de objeto y no solo la variable comprado:boolean

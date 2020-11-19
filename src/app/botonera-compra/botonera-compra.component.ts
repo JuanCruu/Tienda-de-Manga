@@ -19,6 +19,7 @@ export class BotoneraCompraComponent implements OnInit {
     manga:Manga
   @Output()
     compradoChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  
 
   ngOnInit(): void {
   }
@@ -27,10 +28,12 @@ export class BotoneraCompraComponent implements OnInit {
     this.cart.addToCart(manga)
   }
 
-  comprar(comprado):void{
+  comprar(comprado,manga):void{
     if(!comprado){
       this.comprado=true
       this.compradoChange.emit(this.comprado)
+      this.cart.comprar(manga)
     }
   }
+
 }

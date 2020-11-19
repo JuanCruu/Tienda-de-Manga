@@ -1,4 +1,32 @@
-<div class="container-fluid">
+<div class="container-fluid " >
+<!-- 555312 -->
     
 
+<!-- <ul class="list-group" >
+    <li class="list-group-item list-group-item-action list-group-item-secondary" *ngFor="let manga of (carritoManga$ |async)" > 
+       {{manga.nombre}}   {{manga.precio|currency}}
+    </li>
+</ul> -->
+<table class="table table-striped"  >
+    <thead>
+        <tr>
+            <td>Nombre</td>
+            <td>Precio</td>
+        </tr>
+    </thead>
+    <tbody *ngFor="let manga of (carritoManga$ |async)">
+        <tr>
+            <td>
+                {{manga.nombre}} 
+            </td>
+            <td>
+                {{manga.precio|currency}}
+            </td>
+            <td>
+                <button class="btn btn-danger" (click)="quitar(manga)">X</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button class=" btn btn-primary" (click)="comprarTodo()">Confirmar Compra</button>
 </div>
