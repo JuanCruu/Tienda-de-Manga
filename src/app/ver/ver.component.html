@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-3 ">
+        <div  class="card mb-4 shadow-sm" [ngClass]="{'card text-white bg-success':manga.comprado}" >
+          <a  routerLink="/Ver/{{manga.id}}"> 
+            <img class="card-img-top" [src]="manga.paginas[10]" alt="Card image cap">
+          </a>
+            <div class="card-body">
+              <p class="card-subtitle" *ngIf="manga.comprado==false">Precio: {{manga.precio |currency}} <span class="card-subtitle text-primary" *ngIf="manga.oferta==true">Oferta</span></p>
+              <p class="card-subtitle" *ngIf="manga.comprado==true">Comprado: {{manga.precio |currency}} </p>
+              <app-botonera-compra [manga]="manga" [(comprado)]="manga.comprado" *ngIf="manga.comprado==false"></app-botonera-compra>
+            </div>
+          </div>
+      </div>
+      <div class="bg-light col">
+        <h3 class="card-subtitle mt-2">{{manga.nombre}}</h3>
+        <h4 class="card-subtitle mt-2">{{manga.descripcion}}</h4>
+        <div class="d-flex flex-row">
+            <div   *ngFor="let genero of manga.genero" class="mr-1">
+                <button class="btn btn-primary" *ngIf="(genero)">{{ genero}}</button> 
+            </div>
+        </div>
+        <div class="row row-cols-4 mt-2" *ngIf="manga.comprado">
+            <div *ngFor="let item of manga.paginas; index as i" > 
+                <img class="img-thumbnail" [src]="item" alt="Card image cap" *ngIf="(i!=10)">
+            </div>
+                
+        </div>
+        <p *ngIf="!manga.comprado">debes comprar el casdawed</p>
+
+      </div>
+</div>

@@ -9,6 +9,8 @@ import { TiendaAboutComponent } from './tienda-about/tienda-about.component';
 import { TiendaMangasComponent } from './tienda-mangas/tienda-mangas.component';
 import { BotoneraCompraComponent } from './botonera-compra/botonera-compra.component';
 import { BibliotecaComponent } from './biblioteca/biblioteca.component';
+import { VerComponent } from './ver/ver.component';
+
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { BibliotecaComponent } from './biblioteca/biblioteca.component';
     TiendaAboutComponent,
     TiendaMangasComponent,
     BotoneraCompraComponent,
-    BibliotecaComponent
+    BibliotecaComponent,
+    VerComponent,
+    
   ],
   imports: [
     BrowserModule,

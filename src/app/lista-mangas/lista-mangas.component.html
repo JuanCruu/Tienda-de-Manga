@@ -1,10 +1,11 @@
 <div >
     <div class="row" >
        <!-- -- //////////////////////////////-- -->
-        <div class="col-md-3 " *ngFor="let manga of mangasList">
-          
-            <div  class="card mb-4 shadow-sm" [ngClass]="{'card text-white bg-success':manga.comprado}">
-              <img class="card-img-top" [src]="manga.paginas[0]" alt="Card image cap">
+        <div class="col-md-3 " *ngFor="let manga of mangasList" >
+          <div  class="card mb-4 shadow-sm" [ngClass]="{'card text-white bg-success':manga.comprado}" >
+            <a  routerLink="/Ver/{{manga.id}}"> 
+              <img class="card-img-top" [src]="manga.paginas[10]" alt="Card image cap">
+            </a>
               <div class="card-body">
                 <p class="card-subtitle">{{manga.nombre}}</p>
                 <p class="card-subtitle" *ngIf="manga.comprado==false">Precio: {{manga.precio |currency}} <span class="card-subtitle text-primary" *ngIf="manga.oferta==true">Oferta</span></p>

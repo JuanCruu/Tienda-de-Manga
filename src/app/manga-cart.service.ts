@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Manga } from './lista-mangas/Manga';
 
 @Injectable({
@@ -10,7 +10,10 @@ export class MangaCartService {
   constructor() {
     
    }
-  
+
+  private _leerManga:Manga=null;
+  leerManga:BehaviorSubject<Manga>=new BehaviorSubject(this._leerManga);  
+
   private _mangas:Manga[]=[];
   mangas:BehaviorSubject<Manga[]>=new BehaviorSubject(this._mangas);  
 
@@ -75,4 +78,14 @@ export class MangaCartService {
     }
     this.mangas.next(this._mangas);
   }
+
+  buscaManga(id:number){
+    this._leerManga= this._mangas.find(manga=>manga.id===id);
+    this.leerManga.next(this._leerManga)
+  }
+  
+  buscarManga(id:number):Manga{
+     return this._mangas.find(manga=>manga.id===id);
+  }
+  
 }

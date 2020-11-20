@@ -2,9 +2,10 @@
 <div class="container">
     <div class="row" >
         <div class="col-md-3 " *ngFor="let manga of mangasComprados">
-          
             <div  class="card mb-4 shadow-sm">
-              <img class="card-img-top" [src]="manga.paginas[0]" alt="Card image cap">
+              <a  routerLink="/Ver/{{manga.id}}"> 
+                <img class="card-img-top" [src]="manga.paginas[0]" alt="Card image cap">
+              </a>
               <div class="card-body">
                 <p class="card-subtitle">{{manga.nombre}}</p>
                
