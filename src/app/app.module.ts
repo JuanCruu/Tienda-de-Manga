@@ -8,6 +8,8 @@ import { CarritoComprasComponent } from './carrito-compras/carrito-compras.compo
 import { TiendaAboutComponent } from './tienda-about/tienda-about.component';
 import { TiendaMangasComponent } from './tienda-mangas/tienda-mangas.component';
 import { BotoneraCompraComponent } from './botonera-compra/botonera-compra.component';
+import { BibliotecaComponent } from './biblioteca/biblioteca.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { BotoneraCompraComponent } from './botonera-compra/botonera-compra.compo
     CarritoComprasComponent,
     TiendaAboutComponent,
     TiendaMangasComponent,
-    BotoneraCompraComponent
+    BotoneraCompraComponent,
+    BibliotecaComponent
   ],
   imports: [
     BrowserModule,

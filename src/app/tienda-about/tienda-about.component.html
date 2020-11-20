@@ -1,2 +1,68 @@
-<p>tienda-about works!</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias suscipit aperiam eum ut itaque officia dolorem. Mollitia quas dicta voluptatibus molestiae expedita. Quam nulla quae veniam doloribus in magnam modi!</p>
+
+<div class="container">
+	<img src="https://www.sdpnoticias.com/files/image_1200_674/uploads/2019/08/06/5d48e1de2e7e6.png" alt="vaca"> 
+</div>
+<!-- //Manga:Objeto//
+
+id:integer
+nombre:String
+descripcion:String
+genero:[String]
+precio:number
+paginas:[String]
+comprado:boolean
+
+
+//componentes//
+navar::modfica.FiltrarPorGenero(Genero)
+thumnail::verManga
+body::FiltrarPorGenero(Genero)
+carrito::muestra.listaCarrito
+verManga
+myBiblioteca::muestra.mangasComprados
+About
+
+//service//
+listaCarrito
+mangasComprados
+FiltrarPorGenero
+fondos de la cuenta
+
+los mangas tienen un:
+arreglo de images
+un arreglo de genero
+	ejemplo genero:"accion","aventura","ficcion","romance"," "
+precio
+un boolean si esta comprado o no
+
+
+logica del negocio
+
+::el new (funcionaria como un home mostrando todos los mangas mas nuevos)
+utilizando el ngfor e ngif mostrara los mangas solo si esta dentro de su arreglo de genero el cual estara dentro de un servicio y por defecto sera "" trayendo todos
+
+::el genero cambiaria el estado de ese servicio hacia otro genero
+reseteando la lista y mostrando solo los mangas si tienen el genero
+
+::add to carr agregaria al carrito el manga el cual se quiere comprar
+
+::comprar se salta esa parte
+
+(la idea de hacer esas 2 funcionalidades por separado es para saltearse pasos o comprar muchos al mismo tiempo)
+
+al ser una tienda de comics virtual no tendria sentido el tema del stock
+
+::biblioteca la funcionalidad de esta es mostrar solo los mangas que tengo comprados pudiendolos filtrar por generos dentro del mismo componente
+
+(para darle mas sentido a esta logica, se utiliza el boolean del objeto manga para reconocer si esta comprado o no el cual se pasara a true si se compra el libro)si el boolean esta en false a la hora de visualizar el manga desde su componente solo si mostraran las primeras 3 paginas como una pequeña muestra del producto
+
+cambiar el stado o agregarlo a un arreglo de comics comprados
+
+al comprar un manga( 
+`	se verifica si alacanza el dinero para pagarlo
+	se busca ese manga en el carrito del servicio
+	si esta,quitarlo 
+	se agrega a un arreglo de mangas comprados
+	se cambia la variable comprado en el manga
+	
+) -->
